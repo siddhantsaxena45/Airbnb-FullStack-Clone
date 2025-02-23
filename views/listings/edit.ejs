@@ -28,10 +28,7 @@
                             please enter valid description
                         </div>
                     </div>
-                    <div class="mb-3">
-                        Original image <br>
-                        <img src="<%= originalimageurl %>"  />
-                    </div>    
+                    
                     <div class="mb-3">
                         <label class="form-label" for="Category">Category</label>
                         <select class="form-control" name="listing[category]" id="Category" required>
@@ -49,6 +46,10 @@
                             Please select a valid category.
                         </div>
                     </div>
+                    <div class="mb-3">
+                        Original image <br>
+                        <img src="<%= originalimageurl %>"  />
+                    </div>    
                     <div class="mb-3">
                         <label class="form-label" for="Image">Edit Image</label>
                         <input type="file" class="form-control" name="listing[image][url]"
