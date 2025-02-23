@@ -7,7 +7,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 - 🔍 **Search & Filters:** Search destinations and filter properties by categories (Trending, Mountains, Camping, etc.).
 - 🗺 **Map Integration:** Displays property locations using Google Maps API.
 - 📝 **User Reviews:** Users can leave reviews and ratings.
-- 🔒 **Authentication:** Secure login and signup using Passport.js.
+- 🔐 **Authentication:** Secure login and signup using Passport.js.
 - 🛒 **Tax Toggle:** Users can toggle to see the total price including taxes.
 
 ---
@@ -22,7 +22,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 
 ---
 
-## 🏡 Installation & Setup
+## 🏗 Installation & Setup
 
 ### 1️⃣ Clone the repository
 ```sh
@@ -44,11 +44,11 @@ CLOUD_API_SECRET=your_cloudinary_secret
 MAP_API_KEY=your_google_maps_api_key
 ATLASDB_URL=your_mongodb_connection_string
 SECRET=your_secret_key
-```
+``` 
 
 ---
 
-## 📁 Cloudinary Setup (Image Hosting)
+## 📂 Cloudinary Setup (Image Hosting)
 1. Sign up at [Cloudinary](https://cloudinary.com/)
 2. Go to **Dashboard** and get your **Cloud Name, API Key, and API Secret**
 3. Add these to the `.env` file as shown above
@@ -72,31 +72,24 @@ module.exports = cloudinary;
 
 ---
 
-## 🏢 MongoDB Atlas Setup (Database)
-1. Sign up at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a **New Cluster**
-3. Click **Connect** > **Connect Your Application**
-4. Copy the MongoDB connection string and replace `your_mongodb_connection_string` in `.env`
-5. Install Mongoose:
+## 📂 MongoDB Connection Setup
+1. Install MongoDB connection package:
 ```sh
-npm install mongoose
+npm i mongo-connect
 ```
-6. Connect to MongoDB in `app.js`:
+2. Configure MongoDB connection in `app.js`:
 ```js
-const mongoose = require('mongoose');
+const mongoConnect = require('mongo-connect');
 require('dotenv').config();
 
-mongoose.connect(process.env.ATLASDB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+mongoConnect.connect(process.env.ATLASDB_URL)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 ```
 
 ---
 
-## 🛠️ Deploying on Render (Backend Hosting)
+## 🚀 Deploying on Render (Backend Hosting)
 1. Sign up at [Render](https://render.com/)
 2. Click **New Web Service** and connect your GitHub repo
 3. Select **Node.js** as runtime
@@ -138,11 +131,11 @@ This project is licensed under the **MIT License**.
 **Enjoy using Wanderlust! 🌍✈️**
 
 ## SCREENSHOTS
-![Wanderlust Screenshot 1](screenshots/image_1.png)
-![Wanderlust Screenshot 2](screenshots/image_2.png)
-![Wanderlust Screenshot 3](screenshots/image_3.png)
-![Wanderlust Screenshot 4](screenshots/image_4.png)
-![Wanderlust Screenshot 5](screenshots/image_5.png)
-![Wanderlust Screenshot 6](screenshots/image_6.png)
+![Wanderlust Screenshot 1](screenshots/image_1.png) 
+![Wanderlust Screenshot 2](screenshots/image_2.png) 
+![Wanderlust Screenshot 3](screenshots/image_3.png) 
+![Wanderlust Screenshot 4](screenshots/image_4.png) 
+![Wanderlust Screenshot 5](screenshots/image_5.png) 
+![Wanderlust Screenshot 6](screenshots/image_6.png) 
 ![Wanderlust Screenshot 7](screenshots/image_7.png)
 
