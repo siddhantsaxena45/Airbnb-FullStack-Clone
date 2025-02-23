@@ -7,7 +7,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 - 🔍 **Search & Filters:** Search destinations and filter properties by categories (Trending, Mountains, Camping, etc.).
 - 🗺 **Map Integration:** Displays property locations using Google Maps API.
 - 📝 **User Reviews:** Users can leave reviews and ratings.
-- 🔐 **Authentication:** Secure login and signup using Passport.js.
+- 🔒 **Authentication:** Secure login and signup using Passport.js.
 - 🛒 **Tax Toggle:** Users can toggle to see the total price including taxes.
 
 ---
@@ -18,11 +18,11 @@ Wanderlust is a web application that allows users to explore and book unique acc
 - **Authentication:** Passport.js (Local Strategy)
 - **Session Management:** Express-session
 - **Styling:** Bootstrap & Font Awesome
-- **Deployment:** Render (for backend) & Cloudinary (for image hosting)
+- **Deployment:** Railway (for backend) & Cloudinary (for image hosting)
 
 ---
 
-## 🏗 Installation & Setup
+## 🏰 Installation & Setup
 
 ### 1️⃣ Clone the repository
 ```sh
@@ -44,11 +44,11 @@ CLOUD_API_SECRET=your_cloudinary_secret
 MAP_API_KEY=your_google_maps_api_key
 ATLASDB_URL=your_mongodb_connection_string
 SECRET=your_secret_key
-``` 
+```
 
 ---
 
-## 📂 Cloudinary Setup (Image Hosting)
+## 💂️ Cloudinary Setup (Image Hosting)
 1. Sign up at [Cloudinary](https://cloudinary.com/)
 2. Go to **Dashboard** and get your **Cloud Name, API Key, and API Secret**
 3. Add these to the `.env` file as shown above
@@ -56,44 +56,22 @@ SECRET=your_secret_key
 ```sh
 npm install cloudinary
 ```
-5. Configure Cloudinary in `cloudconfig.js`:
-```js
-const cloudinary = require('cloudinary').v2;
-require('dotenv').config();
-
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API_KEY,
-  api_secret: process.env.CLOUD_API_SECRET
-});
-
-module.exports = cloudinary;
-```
 
 ---
 
-## 📂 MongoDB Connection Setup
+## 💂️ MongoDB Connection Setup
 1. Install MongoDB connection package:
 ```sh
 npm i mongo-connect
 ```
-2. Configure MongoDB connection in `app.js`:
-```js
-const mongoConnect = require('mongo-connect');
-require('dotenv').config();
-
-mongoConnect.connect(process.env.ATLASDB_URL)
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
-```
 
 ---
 
-## 🚀 Deploying on Render (Backend Hosting)
-1. Sign up at [Render](https://render.com/)
-2. Click **New Web Service** and connect your GitHub repo
+## 🚀 Deploying on Railway (Backend Hosting)
+1. Sign up at [Railway](https://railway.app/)
+2. Click **New Project** and connect your GitHub repo
 3. Select **Node.js** as runtime
-4. Add environment variables from `.env` in **Render Environment Variables**
+4. Add environment variables from `.env` in **Railway Environment Variables**
 5. Set build and start commands:
    - Build: `npm install`
    - Start: `node app.js`
@@ -125,17 +103,17 @@ airbnbclone/
 ```
 ---
 
-## 📄 License
+## 📝 License
 This project is licensed under the **MIT License**.
 
 **Enjoy using Wanderlust! 🌍✈️**
 
 ## SCREENSHOTS
-![Wanderlust Screenshot 1](screenshots/image_1.png) 
-![Wanderlust Screenshot 2](screenshots/image_2.png) 
-![Wanderlust Screenshot 3](screenshots/image_3.png) 
-![Wanderlust Screenshot 4](screenshots/image_4.png) 
-![Wanderlust Screenshot 5](screenshots/image_5.png) 
-![Wanderlust Screenshot 6](screenshots/image_6.png) 
+![Wanderlust Screenshot 1](screenshots/image_1.png)
+![Wanderlust Screenshot 2](screenshots/image_2.png)
+![Wanderlust Screenshot 3](screenshots/image_3.png)
+![Wanderlust Screenshot 4](screenshots/image_4.png)
+![Wanderlust Screenshot 5](screenshots/image_5.png)
+![Wanderlust Screenshot 6](screenshots/image_6.png)
 ![Wanderlust Screenshot 7](screenshots/image_7.png)
 
