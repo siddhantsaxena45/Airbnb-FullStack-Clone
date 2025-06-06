@@ -2,6 +2,8 @@
 
 Wanderlust is a web application that allows users to explore and book unique accommodations, including houses, rooms, castles, and camping spots. The project integrates a free map API (Google Maps) and provides user authentication, reviews, and category-based filtering.
 
+## hosted live -> https://wnaderlust-89l3.onrender.com/listings
+
 ## 🚀 Features
 - 🏠 **Browse Listings:** View various accommodations like houses, rooms, castles, and more.
 - 🔍 **Search & Filters:** Search destinations and filter properties by categories (Trending, Mountains, Camping, etc.).
@@ -18,7 +20,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 - **Authentication:** Passport.js (Local Strategy)
 - **Session Management:** Express-session
 - **Styling:** Bootstrap & Font Awesome
-- **Deployment:** Railway (for backend) & Cloudinary (for image hosting)
+- **Deployment:** Render (for backend) & Cloudinary (for image hosting) & MongoDB Atlas (for databse)
 
 ---
 
@@ -26,7 +28,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your-username/wanderlust.git
+git clone https://github.com/siddhantsaxena45/wanderlust.git
 cd wanderlust
 ```
 
@@ -67,11 +69,11 @@ npm i mongo-connect
 
 ---
 
-## 🚀 Deploying on Railway (Backend Hosting)
-1. Sign up at [Railway](https://railway.app/)
+## 🚀 Deploying on Render (Backend Hosting)
+1. Sign up at https://render.com/ 
 2. Click **New Project** and connect your GitHub repo
 3. Select **Node.js** as runtime
-4. Add environment variables from `.env` in **Railway Environment Variables**
+4. Add environment variables from `.env` in ** Environment Variables**
 5. Set build and start commands:
    - Build: `npm install`
    - Start: `node app.js`
