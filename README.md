@@ -20,7 +20,7 @@ Wanderlust is a web application that allows users to explore and book unique acc
 - **Authentication:** Passport.js (Local Strategy)
 - **Session Management:** Express-session
 - **Styling:** Bootstrap & Font Awesome
-- **Deployment:** Render (for backend) & Cloudinary (for image hosting) & MongoDB Atlas (for databse)
+- **Deployment:** Render (for backend) & Cloudinary (for image hosting) & MongoDB Atlas (for database)
 
 ---
 
